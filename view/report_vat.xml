@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_vat">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>
+                            VAT Period Report
+                        </h2>
+                        <t t-if="data['date_from']"><strong>Date from:</strong> <span t-esc="formated_dates['date_from']"/><span style="color: white;" t-esc="'.' * 8"/></t>
+                        <t t-if="data['date_to']"><strong>Date to:</strong> <span t-esc="formated_dates['date_to']"/></t>
+                        <br/>
+                        <t t-if="data['cash_based']"><strong>Cash based</strong></t>
+                        <table class="table table-condensed" >
+                            <thead>
+                                <tr>
+                                    <th width="75%">
+                                        <strong>TAX Name</strong>
+                                    </th>
+
+                                    <th class="text-right" width="25%">
+                                        <strong>Balance</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="report_lines" t-as="a">
+                                    <td colspan="2">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="75%">
+                                                        <span t-esc="a.text"/>
+
+                                                    </td>
+                                                    <td class="text-right" width="25%">
+                                                        <t t-if="a.type in ['tax','net-amount','scope-purchases'] and a.tagid in get_tax_lines">
+                                                            <span t-esc="a.sign*get_tax_lines[a.tagid][a.type]" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                                        </t>
+                                                        <t t-if="a.type in ['tax-sum']">
+                                                            <span t-esc="a.sign*get_tax_sum" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                                        </t>
+                                                    </td>
+
+                                                </tr>
+                                                <t t-if="data['detailed_report'] and a.type in ['tax','net-amount','scope-purchases'] and a.tagid in get_tax_lines">
+                                                    <t t-set="i" t-value="1"/>
+                                                    <tr t-foreach="get_tax_lines_accounts[a.tagid]" t-as="b">
+                                                        <td width="75%">
+                                                            <span style="color: white;" t-esc="'.' * 4"/>
+                                                            <span t-esc="b['tax-code']"/>
+                                                        </td>
+                                                        <td/>
+
+                                                        <tr t-foreach="b[a.type]" t-as="c">
+                                                            <td>
+                                                                <span style="color: white;" t-esc="'.' * 8"/>
+                                                                <span t-esc="str(c['code'])+' '+c['name']"/>
+                                                            </td>
+                                                            <td class="text-right">
+                                                                <span t-esc="a.sign*c['balance']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                                            </td>
+                                                        </tr>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
+

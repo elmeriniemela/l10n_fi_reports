@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="accounting_report_view_ext" model="ir.ui.view">
+            <field name="name">accounting_report_view.inherit</field>
+            <field name="model">accounting.report</field>
+            <field name="inherit_id" ref="account.accounting_report_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="(//field)[@name='enable_filter']" position="after">
+                    <field name="hide_zero_reports"/>
+                    <field name="separate_sum_and_header"/>
+                </xpath>
+                <xpath expr="(//field)[@name='label_filter']" position="replace">
+                </xpath>
+                <xpath expr="(//field)[@name='date_from_cmp']" position="replace">
+                    <field name="date_from_cmp" />
+                </xpath>
+                <xpath expr="(//field)[@name='date_to_cmp']" position="replace">
+                    <field name="date_to_cmp" attrs="{'required':[('filter_cmp', '=', 'filter_date'),('enable_filter','=',True)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="accounting_report_view_ext" model="ir.ui.view">
+            <field name="name">accounting_report_view.inherit</field>
+            <field name="model">accounting.report</field>
+            <field name="inherit_id" ref="account.accounting_report_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="(//field)[@name='enable_filter']" position="after">
+                    <field name="hide_zero_reports"/>
+                    <field name="separate_sum_and_header"/>
+                </xpath>
+                <xpath expr="(//field)[@name='label_filter']" position="replace">
+                </xpath>
+                <xpath expr="(//field)[@name='date_from_cmp']" position="replace">
+                    <field name="date_from_cmp" />
+                </xpath>
+                <xpath expr="(//field)[@name='date_to_cmp']" position="replace">
+                    <field name="date_to_cmp" attrs="{'required':[('filter_cmp', '=', 'filter_date'),('enable_filter','=',True)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="account.action_account_report_bs_fin" model="ir.actions.act_window">
+            <field name="name">Balance Sheet</field>
+            <field name="res_model">accounting.report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="accounting_report_view_ext"/>
+            <field name="target">new</field>
+            <field name="context" eval="{'default_account_report_id':ref('acc_fin_report_balancesheet_fin_ind_accounts')}"/>
+        </record>
+
+
+
+        <record id="account.action_account_report_pl_fin" model="ir.actions.act_window">
+            <field name="name">Profit and Loss</field>
+            <field name="res_model">accounting.report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="accounting_report_view_ext"/>
+            <field name="target">new</field>
+            <field name="context" eval="{'default_account_report_id':ref('acc_fin_report_profitandloss_fin')}"/>
+        </record>
+
+
+
+
+
+
+
+        <record id="account_journals_report_view" model="ir.ui.view">
+            <field name="name">All Journals</field>
+            <field name="model">account.print.journal</field>
+            <field name="inherit_id" ref="account.account_report_print_journal_view"/>
+            <field name="arch" type="xml">
+            <data>
+            <xpath expr="//field[@name='journal_ids']" position="attributes">
+                <attribute name="domain">[(1, '=', 1)]</attribute>
+            </xpath>
+            </data>
+            </field>
+        </record>
+
+        <record id="action_account_journals_report" model="ir.actions.act_window">
+            <field name="name">Journal report</field>
+            <field name="res_model">account.print.journal</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_journals_report_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="finish_legal_statements" name="Finnish legal statement reports" parent="account.menu_finance_reports"
+        groups="account.group_account_manager,account.group_account_user"/>
+
+        <menuitem
+        id="account.menu_print_journal_fin" name="Journals" parent="finish_legal_statements" action="action_account_journals_report"
+        groups="account.group_account_manager,account.group_account_user"/>
+
+
+        <menuitem id="menu_account_report_bs_fin" name="Finnish Balance Sheet" action="account.action_account_report_bs_fin" parent="finish_legal_statements"
+         groups="account.group_account_manager,account.group_account_user"/>
+
+        <menuitem id="menu_account_report_pl_fin" name="Finnish Profit and Loss" action="account.action_account_report_pl_fin" parent="finish_legal_statements"
+         groups="account.group_account_manager,account.group_account_user"/>
+
+        <!-- hide origina balance sheet and profit and loss report, because they are just duplicates of finnish ones-->
+        <record id="account.menu_account_report_bs" model = 'ir.ui.menu'>
+                <field name='active'>False</field>
+                <field name='name'>Balance Sheet</field>
+        </record>
+
+        <record id="account.menu_account_report_pl" model = 'ir.ui.menu'>
+                <field name='active'>False</field>
+                <field name='name'>Profit and Loss</field>
+        </record>
+
+
+    </data>
+
+</openerp>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="eu_vat_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>
+                            EU VAT Summary Report
+                        </h2>
+                        <t t-if="data['date_from']"><strong>Date from:</strong> <span t-esc="formated_dates['date_from']"/><span style="color: white;" t-esc="'.' * 8"/></t>
+                        <t t-if="data['date_to']"><strong>Date to:</strong> <span t-esc="formated_dates['date_to']"/></t>
+
+                        <table class="table table-condensed" >
+                            <thead>
+                                <tr>
+                                    <t t-if="data['group_by_invoice']">
+                                        <th>
+                                        <strong>Invoice</strong>
+                                        </th>
+                                    </t>
+                                    <th >
+                                        <strong>Partner</strong>
+                                    </th>
+                                    <th >
+                                        <strong>Countr. Code</strong>
+                                    </th>
+                                    <th  >
+                                        <strong>VAT-number</strong>
+                                    </th>
+                                    <th >
+                                        <strong>311-sales-material-EU</strong>
+                                    </th>
+                                    <th  >
+                                        <strong>312-sales-service-EU</strong>
+                                    </th>
+                                    <th  >
+                                        <strong>333-triangulation-sales</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="report_lines" t-as="line">
+                                    <t t-if="data['group_by_invoice']">
+                                        <td colspan="1">
+                                             <span t-esc="line['invoice']"/>
+                                        </td>
+                                    </t>
+                                    <td colspan="1">
+                                         <span t-esc="line['partner']"/>
+                                    </td>
+                                    <td colspan="1">
+                                         <span t-esc="line['country_code']"/>
+                                    </td>
+                                    <td colspan="1">
+                                         <span t-esc="line['vat']"/>
+                                    </td>
+                                    <td colspan="1">
+                                         <span t-esc="line['sales_material_eu']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td colspan="1">
+                                         <span t-esc="line['sales_service_eu']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td colspan="1">
+                                         <span t-esc="line['triagulation_sales']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
+

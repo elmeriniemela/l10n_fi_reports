@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Finnish version of balance and  -->
+<openerp>
+    <data noupdate="0">
+
+        <!-- Finnish Balance Sheet -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balancesheet_fin_ind_accounts">
+            <field name="name">Tase (FIN)</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="sequence">2000</field>
+        </record>
+
+        <!-- ********************* ASSETS BALANCE - Vastaavat  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_assets">
+            <field name="name">VASTAAVAA</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balancesheet_fin_ind_accounts"/>
+            <field name="sequence">2010</field>
+            <field name="style_overwrite" eval="1"/>
+        </record>
+
+        <!-- ********************* FIXED ASSETS - Pysyvät vastaavat  ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_fixed_assets">
+            <field name="name">Pysyvät vastaavat</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_assets"/>
+            <field name="sequence">2020</field>
+        </record>
+
+        <!-- ********************* FIXED IMMATERIAL ASSETS - Aineettomat hyödykkeet  ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_immaterial_assets">
+            <field name="name">Aineettomat hyödykkeet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_fixed_assets"/>
+            <field name="sequence">2030</field>
+        </record>
+
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_intangible_assets">
+            <field name="name">Kehittämismenot</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_immaterial_assets"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_development_costs')])]"/>
+            <field name="sequence">2040</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_immaterial_rights">
+            <field name="name">Aineettomat oikeudet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_immaterial_assets"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_immaterial_rights')])]"/>
+            <field name="sequence">2050</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_goodwill">
+            <field name="name">Liikearvo</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_immaterial_assets"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_goodwill')])]"/>
+            <field name="sequence">2060</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_other_long_term_expenses">
+            <field name="name">Muut pitkävaikutteiset menot</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_immaterial_assets"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_long_term_expenses')])]"/>
+            <field name="sequence">2070</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_advance_payments_intangible">
+            <field name="name">Ennakkomaksut</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_immaterial_assets"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_advance_payments_intangible')])]"/>
+            <field name="sequence">2080</field>
+        </record>
+
+        <!-- ********************* FIXED MATERIAL ASSETS - Aineelliset hyödykkeet  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_material_assets">
+            <field name="name">Aineelliset hyödykkeet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_fixed_assets"/>
+            <field name="sequence">2090</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_land_and_water_areas">
+            <field name="name">Maa- ja vesialueet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_material_assets"/>
+            <field name="sequence">2100</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_land_and_water_areas_owned">
+            <field name="name">Omistetut</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_land_and_water_areas"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_land_and_water_areas_owned')])]"/>
+            <field name="sequence">2110</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_land_and_water_rights_lease">
+            <field name="name">Vuokraoikeudet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_land_and_water_areas"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_land_and_water_rights_lease')])]"/>
+            <field name="sequence">2120</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_buildings">
+            <field name="name">Rakennukset ja rakennelmat</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_material_assets"/>
+            <field name="sequence">2130</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_buildings_owned">
+            <field name="name">Omistetut</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_buildings"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_buildings_owned')])]"/>
+            <field name="sequence">2140</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_building_leases">
+            <field name="name">Vuokraoikeudet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_buildings"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_building_leases')])]"/>
+            <field name="sequence">2150</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_machines_and_hardware">
+            <field name="name">Koneet ja kalusto</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_material_assets"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_machines_and_hardware')])]"/>
+            <field name="sequence">2160</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_other_tangible_assets">
+            <field name="name">Muut aineelliset hyödykkeet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_material_assets"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_tangible_assets')])]"/>
+            <field name="sequence">2170</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_payments_on_account_tangible">
+            <field name="name">Ennakkomaksut ja keskeneräiset hankinnat</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_material_assets"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_payments_on_account_tangible')])]"/>
+            <field name="sequence">2180</field>
+        </record>
+
+        <!-- ********************* INVESTMENTS - Sijoitukset ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_investments">
+            <field name="name">Sijoitukset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_fixed_assets"/>
+            <field name="sequence">2190</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_shares_in_group_companies">
+            <field name="name">Osuudet saman konsernin yrityksissä</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_investments"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_shares_in_group_companies')])]"/>
+            <field name="sequence">2200</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_shares_in_associated_companies">
+            <field name="name">Saamiset saman konsernin yrityksiltä</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_investments"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_shares_in_associated_companies')])]"/>
+            <field name="sequence">2210</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_shares_in_associated_companies">
+            <field name="name">Osuudet omistusyhteysyrityksissä</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_investments"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_shares_in_associated_companies')])]"/>
+            <field name="sequence">2220</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_receiv_associated_companies_investments">
+            <field name="name">Saamiset omistusyhteysyrityksiltä</field>
+            <field name="sign" eval="1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_investments"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_receivables_from_associated_companies_investments')])]"/>
+            <field name="sequence">2230</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_other_shares_and_participations">
+            <field name="name">Muut osakkeet ja osuudet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_investments"/>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_other_shares_and_participations')])]"/>
+            <field name="sequence">2240</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_other_receivables_investments">
+            <field name="name">Muut saamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_investments"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_receivables_investments')])]"/>
+            <field name="sequence">2250</field>
+        </record>
+
+        <!-- ********************* CHANGING ASSETS - Vaihtuvat vastaavat  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_chnage_assets">
+            <field name="name">Vaihtuvat vastaavat</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_assets"/>
+            <field name="sequence">2260</field>
+        </record>
+
+        <!-- ********************* INVENTORIES - Vaihto-omaisuus  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_inventories">
+            <field name="name">Vaihto-omaisuus</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_chnage_assets"/>
+            <field name="sequence">2270</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_materials_and_supplies_inventories">
+            <field name="name">Aineet ja tarvikkeet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_materials_and_supplies_inventories')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_inventories"/>
+            <field name="sequence">2280</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_work_in_progress">
+            <field name="name">Keskeneräiset tuotteet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_work_in_progress')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_inventories"/>
+            <field name="sequence">2290</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_finished_goods_inventories">
+            <field name="name">Valmiit tuotteet/tavarat</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_finished_goods_inventories')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_inventories"/>
+            <field name="sequence">2300</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_other_current_assets">
+            <field name="name">Muu vaihto-omaisuus</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_current_assets')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_inventories"/>
+            <field name="sequence">2310</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_advance_payments_for_property">
+            <field name="name">Ennakkomaksut</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_advance_payments_for_property')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_inventories"/>
+            <field name="sequence">2320</field>
+        </record>
+
+        <!-- ********************* Receiveble - Saamiset  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_receivables">
+            <field name="name">Saamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_chnage_assets"/>
+            <field name="sequence">2330</field>
+        </record>
+
+        <!-- ********************* Long Ter Receiveble - Pitkä-aikaiset Saamiset  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_receivables_long-term">
+            <field name="name">Pitkäaikaiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables"/>
+            <field name="sequence">2340</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_trade_receivables_long-term">
+            <field name="name">Myyntisaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_trade_receivables_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_long-term"/>
+            <field name="sequence">2350</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_receivables_from_group_long-term">
+            <field name="name">Saamiset saman konsernin yrityksiltä</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_receivables_from_group_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_long-term"/>
+            <field name="sequence">2360</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_receiv_associated_companies_non-current">
+            <field name="name">Saamiset omistusyhteysyrityksiltä</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_receivables_from_associated_companies_non-current')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_long-term"/>
+            <field name="sequence">2370</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_loan_receivables_long-term">
+            <field name="name">Lainasaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_loan_receivables_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_long-term"/>
+            <field name="sequence">2380</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_deferred_tax_assets_are_long-term">
+            <field name="name">Laskennalliset verosaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_deferred_tax_assets_are_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_long-term"/>
+            <field name="sequence">2390</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_other_long-term_receivables">
+            <field name="name">Muut saamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_long-term_receivables')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_long-term"/>
+            <field name="sequence">2400</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_unpaid_shares_of_long-term">
+            <field name="name">Maksamattomat osakkeet/osuudet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_unpaid_shares_of_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_long-term"/>
+            <field name="sequence">2410</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_prepaid_expenses_and_long-term">
+            <field name="name">Siirtosaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_prepaid_expenses_and_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_long-term"/>
+            <field name="sequence">2420</field>
+        </record>
+
+
+        <!-- ********************* Short Term Receivebles - Lyhyaikaiset-aikaiset Saamiset  ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_receivables_short-term">
+            <field name="name">Lyhytaikaiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables"/>
+            <field name="sequence">2430</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_accounts_receivable">
+            <field name="name">Myyntisaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_accounts_receivable')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_short-term"/>
+            <field name="sequence">2440</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_receivables_from_group">
+            <field name="name">Saamiset saman konsernin yrityksiltä</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_receivables_from_group')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_short-term"/>
+            <field name="sequence">2450</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_receivables_from_associated_companies">
+            <field name="name">Saamiset omistusyhteysyrityksiltä</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_receivables_from_associated_companies')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_short-term"/>
+            <field name="sequence">2460</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_loans">
+            <field name="name">Lainasaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_loans')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_short-term"/>
+            <field name="sequence">2470</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_deferred_tax_assets">
+            <field name="name">Laskennalliset verosaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_deferred_tax_assets')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_short-term"/>
+            <field name="sequence">2480</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_other_receivables">
+            <field name="name">Muut saamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_receivables')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_short-term"/>
+            <field name="sequence">2490</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_unpaid_contributions">
+            <field name="name">Maksamattomat osakkeet/osuudet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_unpaid_contributions')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_short-term"/>
+            <field name="sequence">2500</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_prepayments_and_accrued_income">
+            <field name="name">Siirtosaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_prepayments_and_accrued_income')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_receivables_short-term"/>
+            <field name="sequence">2510</field>
+        </record>
+
+
+        <!-- ********************* Financial security - Rahoitusarvopaperit  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_financial_security">
+            <field name="name">Rahoitusarvopaperit</field>
+            <field name="sign" eval="1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_chnage_assets"/>
+            <field name="sequence">2520</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_shares_consolidated_financial_secur">
+            <field name="name">Osuudet saman konsernin yrityksissä</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_shares_in_the_consolidated_financial_securities')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financial_security"/>
+            <field name="sequence">2530</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_shares_and_marketable_secur">
+            <field name="name">Muut osakkeet ja osuudet</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_other_shares_and_marketable_securities')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financial_security"/>
+            <field name="sequence">2540</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_balance_other_financial_assets">
+            <field name="name">Muut arvopaperit</field>
+            <field name="sign" eval="1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_financial_assets')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financial_security"/>
+            <field name="sequence">2550</field>
+        </record>
+
+        <!-- ********************* Liquidity - Rahat ja pankkisaamiset  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_liquidity">
+            <field name="name">Rahat ja pankkisaamiset</field>
+            <field name="sign" eval="1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balance_chnage_assets"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_liquidity')])]"/>
+            <field name="sequence">2560</field>
+        </record>
+
+
+        <!-- ********************* Liabilities - Vastattavaa  ************************** -->
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_Liabilities">
+            <field name="name">VASTATTAVAA</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_balancesheet_fin_ind_accounts"/>
+            <field name="sequence">2570</field>
+            <field name="style_overwrite" eval="1"/>
+            <!--field name="requires_page_break" eval="1"/-->
+        </record>
+
+        <!-- ********************* Owners equity -  Oma Pääoma  ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_owners_equity">
+            <field name="name">Oma pääoma</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_Liabilities"/>
+            <field name="sequence">2580</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_stock_capital">
+            <field name="name">Osake-, osuus- tai muu vastaava pääoma</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_stock_capital')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_owners_equity"/>
+            <field name="sequence">2590</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_share_premium_account">
+            <field name="name">Ylikurssirahasto</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_share_premium_account')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_owners_equity"/>
+            <field name="sequence">2600</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_revaluation_reserve">
+            <field name="name">Arvonkorotusrahasto</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_revaluation_reserve')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_owners_equity"/>
+            <field name="sequence">2610</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_reserves_header">
+            <field name="name">Muut rahastot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_owners_equity"/>
+            <field name="sequence">2620</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_the_invested_unrestricted_equity_fund">
+            <field name="name">Sijoitetun vapaan oman pääoman rahasto</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_the_invested_unrestricted_equity_fund')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_other_reserves_header"/>
+            <field name="sequence">2630</field>
+        </record>
+
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_reserve">
+            <field name="name">Vararahasto</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_reserve')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_other_reserves_header"/>
+            <field name="sequence">2640</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_articles_association_or_fund_rules">
+            <field name="name">Yhtiöjärjestyksen tai sääntöjen mukaiset rahastot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_the_articles_of_association_or_fund_under_the_rules')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_other_reserves_header"/>
+            <field name="sequence">2650</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_the_fair_value_reserve">
+            <field name="name">Käyvän arvon rahasto</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_the_fair_value_reserve')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_other_reserves_header"/>
+            <field name="sequence">2660</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_reserves">
+            <field name="name">Muut rahastot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_reserves')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_other_reserves_header"/>
+            <field name="sequence">2670</field>
+        </record>
+
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_retained_earnings">
+            <field name="name">Edellisten tilikausien voitto (tappio)</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_retained_earnings')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_owners_equity"/>
+            <field name="sequence">2680</field>
+        </record>
+
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profit_financial_period">
+            <field name="name">Tilikauden voitto (tappio)</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(4,ref('l10n_fi.account_type_administrative_services')),
+                                                    (4,ref('l10n_fi.account_type_change_in_depreciation_difference')),
+                                                    (4,ref('l10n_fi.account_type_change_in_inventories')),
+                                                    (4,ref('l10n_fi.account_type_change_in_provisions')),
+                                                    (4,ref('l10n_fi.account_type_deferred_taxes')),
+                                                    (4,ref('l10n_fi.account_type_depreciation_according_to_plan')),
+                                                    (4,ref('l10n_fi.account_type_external_services')),
+                                                    (4,ref('l10n_fi.account_type_financial_expenses_group')),
+                                                    (4,ref('l10n_fi.account_type_group_contribution')),
+                                                    (4,ref('l10n_fi.account_type_impairment_losses_financial_assets_current_assets')),
+                                                    (4,ref('l10n_fi.account_type_impairment_losses_on_investments_in_fixed_assets')),
+                                                    (4,ref('l10n_fi.account_type_impairment_of_fixed_assets')),
+                                                    (4,ref('l10n_fi.account_type_in_machinery_and_equipment_expenses')),
+                                                    (4,ref('l10n_fi.account_type_income_from_associated_company')),
+                                                    (4,ref('l10n_fi.account_type_income_from_shares_in_group')),
+                                                    (4,ref('l10n_fi.account_type_income_other')),
+                                                    (4,ref('l10n_fi.account_type_interest_and_financial_income_from_group')),
+                                                    (4,ref('l10n_fi.account_type_investment_income_other_current_assets_group')),
+                                                    (4,ref('l10n_fi.account_type_it_expenses')),
+                                                    (4,ref('l10n_fi.account_type_manufacturing_own_use')),
+                                                    (4,ref('l10n_fi.account_type_manufacturing_warehouse_change')),
+                                                    (4,ref('l10n_fi.account_type_marketing_expenses')),
+                                                    (4,ref('l10n_fi.account_type_other_additional_expenses_other')),
+                                                    (4,ref('l10n_fi.account_type_other_additional_expenses_production')),
+                                                    (4,ref('l10n_fi.account_type_other_administrative_expenses')),
+                                                    (4,ref('l10n_fi.account_type_other_financial_expenses')),
+                                                    (4,ref('l10n_fi.account_type_other_fixed_costs')),
+                                                    (4,ref('l10n_fi.account_type_other_interest_and_financial_income')),
+                                                    (4,ref('l10n_fi.account_type_other_investment_income_from_fixed_assets')),
+                                                    (4,ref('l10n_fi.account_type_other_tax')),
+                                                    (4,ref('l10n_fi.account_type_pension_costs_of_production')),
+                                                    (4,ref('l10n_fi.account_type_pension_costs_other')),
+                                                    (4,ref('l10n_fi.account_type_personnel_other')),
+                                                    (4,ref('l10n_fi.account_type_premises_costs')),
+                                                    (4,ref('l10n_fi.account_type_purchases')),
+                                                    (4,ref('l10n_fi.account_type_purchases_adjustment_items')),
+                                                    (4,ref('l10n_fi.account_type_representation')),
+                                                    (4,ref('l10n_fi.account_type_research_and_development')),
+                                                    (4,ref('l10n_fi.account_type_sales')),
+                                                    (4,ref('l10n_fi.account_type_sales_adjustment_items')),
+                                                    (4,ref('l10n_fi.account_type_selling_expenses')),
+                                                    (4,ref('l10n_fi.account_type_taxes_for_the_period')),
+                                                    (4,ref('l10n_fi.account_type_travelling')),
+                                                    (4,ref('l10n_fi.account_type_vehicle_expenses')),
+                                                    (4,ref('l10n_fi.account_type_wages_and_salaries_in_production')),
+                                                    (4,ref('l10n_fi.account_type_wages_and_salaries_other'))]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_owners_equity"/>
+            <field name="sequence">2690</field>
+        </record>
+
+        <!-- ********************* Untaxed reserves -  Tilinpäätössiirtojen kertymä  ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_untaxed_reserves">
+            <field name="name">Tilipäätössiirtojen kertymä</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_Liabilities"/>
+            <field name="sequence">2700</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_depreciation_difference">
+            <field name="name">Poistoero</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_depreciation_difference')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_untaxed_reserves"/>
+            <field name="sequence">2710</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_tax_based_reservations">
+            <field name="name">Verotusperäiset varaukset</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_tax_based_reservations')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_untaxed_reserves"/>
+            <field name="sequence">2720</field>
+        </record>
+
+        <!-- ********************* Statutory reserves -  Pakolliset varaukset  ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_statutory_reserves">
+            <field name="name">Pakolliset varaukset</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_Liabilities"/>
+            <field name="sequence">2730</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_provisions_for_pensions">
+            <field name="name">Eläkevaraukset</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_provisions_for_pensions')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_statutory_reserves"/>
+            <field name="sequence">2740</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_tax_provisions">
+            <field name="name">Verovaraukset</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_tax_provisions')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_statutory_reserves"/>
+            <field name="sequence">2750</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_provisions">
+            <field name="name">Muut pakolliset varaukset</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_provisions')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_statutory_reserves"/>
+            <field name="sequence">2760</field>
+        </record>
+
+        <!-- ********************* Creditors -  Vieras pääoma  ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_creditors">
+            <field name="name">Vieras pääoma</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_Liabilities"/>
+            <field name="sequence">2770</field>
+        </record>
+
+        <!-- ********************* Creditors long-term -  Vieras pääoma pitkä-aikainen ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_creditors_long-term">
+            <field name="name">Pitkäaikainen</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors"/>
+            <field name="sequence">2780</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_creditors_long-term_equity_loans">
+            <field name="name">Pääomalainat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_subordinated_loans_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2790</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_creditors_bonds_are_long-term">
+            <field name="name">Joukkovelkakirjalainat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_bonds_are_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2800</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_convertible_bonds_long-term">
+            <field name="name">Vaihtovelkakirjalainat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_convertible_bonds_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2810</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_loans_financial_instituts_long-term">
+            <field name="name">Lainat rahoituslaitoksilta</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_loans_from_financial_institutions_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2820</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_pension_loans_long-term">
+            <field name="name">Takaisinlainat työeläkevakuutuslaitoksilta</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_pension_loans_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2830</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_advances_received_long-term">
+            <field name="name">Saadut ennakot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_advances_received_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2840</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_accounts_payable-current">
+            <field name="name">Ostovelat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_accounts_payable-current')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2850</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_bills_of_long-term">
+            <field name="name">Rahoitusvekselit</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_bills_of_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2860</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_consolidated_long-term_liabilities">
+            <field name="name">Velat saman konsernin yrityksille</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_consolidated_long-term_liabilities')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2870</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_payables_associated_companies_non-cur">
+            <field name="name">Velat omistusyhteysyrityksille</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_payables_to_associated_companies_non-current')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2880</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_deferred_tax_liabilities_are_long-term">
+            <field name="name">Laskennalliset verovelat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_deferred_tax_liabilities_are_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2890</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_long-term_liabilities">
+            <field name="name">Muut velat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_long-term_liabilities')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2900</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_accrued_long-term">
+            <field name="name">Siirtovelat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_accrued_long-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_long-term"/>
+            <field name="sequence">2910</field>
+        </record>
+
+        <!-- ********************* Creditors short-term -  Vieras pääoma lyhytaikainen ************************** -->
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_creditors_short-term">
+            <field name="name">Lyhytaikainen</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors"/>
+            <field name="sequence">2920</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_creditors_short-term_equity_loans">
+            <field name="name">Pääomalainat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_capital_loans_are_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">2930</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_bonds_short-term">
+            <field name="name">Joukkovelkakirjalainat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_bonds_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">2940</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_convertible_bonds_short-term">
+            <field name="name">Vaihtovelkakirjalainat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_convertible_bonds_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">2950</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_loans_from_financial_instits_short-term">
+            <field name="name">Lainat rahoituslaitoksilta</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_loans_from_financial_institutions_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">2960</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_pension_loans_short-term">
+            <field name="name">Takaisinlainat työeläkevakuutuslaitoksilta</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_pension_loans_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">2970</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_advances_received_short-term">
+            <field name="name">Saadut ennakot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_advances_received_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">2980</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_accounts_payable">
+            <field name="name">Ostovelat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_accounts_payable')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">2990</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_bills_of_short-term">
+            <field name="name">Rahoitusvekselit</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_bills_of_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">3000</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_group_short-term_liabilities">
+            <field name="name">Velat saman konsernin yrityksille</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_group_short-term_liabilities')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">3010</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_payables_to_associated_companies">
+            <field name="name">Velat omistusyhteysyrityksille</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_payables_to_associated_companies')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">3020</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_deferred_tax_liabilities_are_short-term">
+            <field name="name">Laskennalliset verovelat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_deferred_tax_liabilities_are_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">3030</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_short-term_liabilities">
+            <field name="name">Muut velat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_short-term_liabilities')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">3040</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_accrued_liabilities_short-term">
+            <field name="name">Siirtovelat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="display_detail">no_detail</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_accrued_liabilities_short-term')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_creditors_short-term"/>
+            <field name="sequence">3050</field>
+        </record>
+
+        <!-- Finnish Profit & Loss report -->
+
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_fin">
+            <field name="name">Tuloslaskelma (FIN)</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="sequence">2004</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_account_type_sales">
+            <field name="name">Myynti</field>
+            <field name="sign" eval="-1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="display_detail">no_detail</field>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_sales')])]"/>
+            <field name="sequence">900</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_sales_adjustment_items">
+            <field name="name">Myynnin oikaisu</field>
+            <field name="sign" eval="-1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="display_detail">no_detail</field>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_sales_adjustment_items')])]"/>
+            <field name="sequence">910</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_turnover">
+          <field name="name">Liikevaihto</field>
+          <field name="sign" eval="-1" />
+          <field name="type">cumulative</field>
+          <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+          <field name="sequence">1010</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_warehouse">
+            <field name="name">Valmiiden ja keskeneräisten tuotteiden varastojen muutos</field>
+            <field name="sign" eval="-1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="display_detail">no_detail</field>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_manufacturing_warehouse_change')])]"/>
+            <field name="sequence">1020</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_manufacturing_own_use">
+            <field name="name">Valmistus omaan käyttöön</field>
+            <field name="sign" eval="-1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="display_detail">no_detail</field>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_manufacturing_own_use')])]"/>
+            <field name="sequence">1030</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_income_other">
+            <field name="name">Liiketoiminnan muut tuotot</field>
+            <field name="sign" eval="-1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="display_detail">no_detail</field>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_income_other')])]"/>
+            <field name="sequence">1040</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_material_and_services">
+            <field name="name">Materiaalit ja palvelut</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="sequence">1050</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_materials_supplies_and_goods">
+            <field name="name">Aineet, tarvikkeet ja tavarat</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_material_and_services"/>
+            <field name="sequence">1060</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_account_type_purchases">
+            <field name="name">Ostot tilikauden aikana</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(4,ref('l10n_fi.account_type_purchases')),
+            (4,ref('l10n_fi.account_type_purchases_adjustment_items'))]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_materials_supplies_and_goods"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1070</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_account_type_change_in_inventories">
+            <field name="name">Varastojen muutos</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_change_in_inventories')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_materials_supplies_and_goods"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1080</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_external_services">
+            <field name="name">Ulkopuoliset palvelut</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_external_services')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_material_and_services"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1090</field>
+        </record>
+
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_personnel_costs">
+            <field name="name">Henkilöstökulut</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="sequence">1100</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_wages_and_salaries">
+            <field name="name">Palkat ja palkkiot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_wages_and_salaries_in_production')]),
+          (6,0,[ref('l10n_fi.account_type_wages_and_salaries_other')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_personnel_costs"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1110</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_personnel_additional_exp">
+            <field name="name">Henkilösivukulut</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_personnel_costs"/>
+            <field name="sequence">1120</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_pension_costs">
+            <field name="name">Eläkekulut</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_pension_costs_of_production')]),
+          (6,0,[ref('l10n_fi.account_type_pension_costs_other')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_personnel_additional_exp"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1130</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_pension_additional_exp_other">
+            <field name="name">Muut henkilösivukulut</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(4,ref('l10n_fi.account_type_other_additional_expenses_production')),
+            (4,ref('l10n_fi.account_type_other_additional_expenses_other'))]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_personnel_additional_exp"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1130</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_depreciations">
+            <field name="name">Poistot ja arvonalentumiset</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="sequence">1140</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_depreciation_according_to_plan">
+            <field name="name">Suunnitelman mukaiset poistot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_depreciation_according_to_plan')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_depreciations"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1150</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_impairment_of_fixed_assets">
+            <field name="name">Arvonalentumiset pysyvien vastaavien hyödykkeistä</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_impairment_of_fixed_assets')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_depreciations"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1160</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_impairment_losses_financial_assets">
+            <field name="name">Vaihtuvien vastaavien poikkeukselliset arvonalentumiset</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_impairment_losses_financial_assets_current_assets')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_depreciations"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1170</field>
+        </record>
+
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_expense_other">
+            <field name="name">Liiketoiminnan muut kulut</field>
+            <field name="sign" eval="-1" />
+            <field name="type">account_type</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="display_detail">no_detail</field>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(4,ref('l10n_fi.account_type_personnel_other')),
+                                                (4,ref('l10n_fi.account_type_premises_costs')),
+                                                (4,ref('l10n_fi.account_type_vehicle_expenses')),
+                                                (4,ref('l10n_fi.account_type_it_expenses')),
+                                                (4,ref('l10n_fi.account_type_in_machinery_and_equipment_expenses')),
+                                                (4,ref('l10n_fi.account_type_travelling')),
+                                                (4,ref('l10n_fi.account_type_representation')),
+                                                (4,ref('l10n_fi.account_type_selling_expenses')),
+                                                (4,ref('l10n_fi.account_type_marketing_expenses')),
+                                                (4,ref('l10n_fi.account_type_research_and_development')),
+                                                (4,ref('l10n_fi.account_type_administrative_services')),
+                                                (4,ref('l10n_fi.account_type_other_administrative_expenses')),
+                                                (4,ref('l10n_fi.account_type_other_fixed_costs'))]"/>
+            <field name="sequence">1180</field>
+        </record>
+        
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profitandloss_ebitda">
+          <field name="name">Liikevoitto (-tappio)</field>
+          <field name="sign" eval="-1" />
+          <field name="type">cumulative</field>
+          <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+          <field name="style_overwrite" eval="1"/>
+          <field name="sequence">1185</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_financtial_income_expense">
+            <field name="name">Rahoitustuotot ja -kulut</field>
+            <field name="sign" eval="-1" />
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="sequence">1190</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_income_from_shares_in_group">
+            <field name="name">Tuotot osuuksista saman konsernin yrityksissä</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_income_from_shares_in_group')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financtial_income_expense"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1200</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_income_from_associated_company">
+            <field name="name">Tuotot osuuksista omistusyhteysyrityksissä</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_income_from_associated_company')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financtial_income_expense"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1210</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_income_other_assets_investment">
+            <field name="name">Tuotot muista pysyvien vastaavien sijoituksista</field>
+            <field name="sign" eval="-1" />
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financtial_income_expense"/>
+            <field name="sequence">1220</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_investment_income_other_current_assets_group">
+            <field name="name">Saman konsernin yrityksiltä</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_investment_income_other_current_assets_group')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_income_other_assets_investment"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1230</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_investment_income_from_fixed_assets">
+            <field name="name">Muilta</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_other_investment_income_from_fixed_assets')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_income_other_assets_investment"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1240</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_interest_financial_income">
+            <field name="name">Muut korko- ja rahoitustuotot</field>
+            <field name="sign" eval="-1" />
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financtial_income_expense"/>
+            <field name="sequence">1243</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_interest_and_financial_income_from_group">
+            <field name="name">Saman konsernin yrityksiltä</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_interest_and_financial_income_from_group')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_other_interest_financial_income"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1245</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_interest_and_financial_income">
+            <field name="name">Muilta</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_other_interest_and_financial_income')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_other_interest_financial_income"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1247</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_imp_loses_invests_fixed_assets">
+            <field name="name">Arvonalentumiset pysyvien vastaavien sijoituksista</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_impairment_losses_on_investments_in_fixed_assets')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financtial_income_expense"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1250</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_impairment_losses_financial_assets">
+            <field name="name">Arvonalentumiset vaihtuvien vastaavien rahoitusarvopapereista</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_impairment_losses_financial_assets_current_assets')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financtial_income_expense"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1260</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_financial_expenses">
+            <field name="name">Korkokulut ja muut rahoituskulut</field>
+            <field name="sign" eval="-1" />
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financtial_income_expense"/>
+            <field name="sequence">1270</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_account_type_financial_expenses_group">
+            <field name="name">Saman konsernin yrityksiltä</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_financial_expenses_group')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financial_expenses"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1280</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_financial_expenses">
+            <field name="name">Muilta</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_other_financial_expenses')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_financial_expenses"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1290</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_profit_before_transfers_and_taxes">
+          <field name="name">Voitto (tappio) ennen tilinpäätössiirtoja ja veroja</field>
+          <field name="sign" eval="-1" />
+          <field name="type">cumulative</field>
+          <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+          <field name="style_overwrite" eval="1"/>
+          <field name="sequence">1295</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_transfers">
+            <field name="name">Tilinpäätössiirrot</field>
+            <field name="sign" eval="-1" />
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="sequence">1300</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_change_in_depreciation_difference">
+            <field name="name">Poistoeron muutos</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_change_in_depreciation_difference')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_transfers"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1310</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_change_in_provisions">
+            <field name="name">Verotusperusteisten varausten muutos</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_change_in_provisions')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_transfers"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1320</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_group_contribution">
+            <field name="name">Konserniavustus</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_group_contribution')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_transfers"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1330</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_income_tax">
+            <field name="name">Tuloverot</field>
+            <field name="sign" eval="-1" />
+            <field name="type">sum</field>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="sequence">1340</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_taxes_for_the_period">
+            <field name="name">Tilikauden verot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_taxes_for_the_period')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_income_tax"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1350</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_account_type_deferred_taxes">
+            <field name="name">Laskennalliset verot</field>
+            <field name="sign" eval="-1"/>
+            <field name="type">account_type</field>
+            <field name="account_type_ids"
+                   eval="[(6,0,[ref('l10n_fi.account_type_deferred_taxes')])]"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_income_tax"/>
+            <field name="display_detail">no_detail</field>
+            <field name="sequence">1360</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_other_tax">
+            <field name="name">Muut välittömät verot</field>
+            <field name="sign" eval="-1"/>
+            <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+            <field name="display_detail">no_detail</field>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(6,0,[ref('l10n_fi.account_type_other_tax')])]"/>
+            <field name="sequence">1370</field>
+        </record>
+
+        <record model="account.financial.report" id="acc_fin_rep_no_accs_financial_period_profit">
+          <field name="name">Tilikauden voitto (tappio)</field>
+          <field name="sign" eval="-1" />
+          <field name="type">cumulative</field>
+          <field name="parent_id" ref="acc_fin_rep_no_accs_profitandloss_fin"/>
+          <field name="style_overwrite" eval="1"/>
+          <field name="sequence">1380</field>
+        </record>
+
+
+    </data>
+</openerp>

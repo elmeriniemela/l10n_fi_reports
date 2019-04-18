@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_financial_finnish" inherit_id="account.report_financial">
+        <xpath expr="(//div)[1]" position="replace">
+
+            <div class="page">
+                <h2 t-esc="data['account_report_id'][1]"/>
+
+                <t t-foreach="range(page_count)" t-as="page">
+                    <table class="table table-condensed" t-if="data['debit_credit'] == 1">
+                        <thead>
+                            <tr>
+                                <th>
+
+                                    <strong t-esc="data['account_report_id'][1]"/><br/>
+                                    <t t-if="data['date_from']"><strong>Date from :</strong> <span t-esc="formated_dates['date_from']"/></t>
+                                </th>
+                                <th colspan="3">
+                                    <strong>Target Moves:</strong>
+                                    <strong t-if="data['target_move'] == 'all'">All Entries</strong>
+                                    <strong t-if="data['target_move'] == 'posted'">All Posted Entries</strong><br/>
+                                    <t t-if="data['date_to']"><strong>Date to :</strong> <span t-esc="formated_dates['date_to']"/></t>
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th class="text-right">Debit</th>
+                                <th class="text-right">Credit</th>
+                                <th class="text-right">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="pages[page]" t-as="a">
+                                <t t-if="a['level'] != 0">
+                                    <t t-if="a.get('level') &gt; 3">
+                                        <t t-set="style_div" t-value="'padding: 5px 0; border-left: ' + str(a.get('level', 0) * 10) + 'px solid #ffffff; margin 5px auto'"/>
+                                        <t t-set="style_text" t-value="'font-weight: normal;'"/>
+                                    </t>
+                                    <t t-if="not a.get('level') &gt; 3">
+                                        <t t-set="style_div" t-value="'padding: 5px 0; border-left: ' + str(a.get('level', 0) * 10) + 'px solid #ffffff; margin 5px auto'"/>
+                                        <t t-set="style_text" t-value="'font-weight: bold;'"/>
+
+                                    </t>
+
+                                    <td>
+                                        <div t-att-style="style_div"> <span t-att-style="style_text" t-esc="a.get('name')"/></div>
+                                    </td>
+                                    <td class="text-right" style="white-space: text-nowrap;">
+                                        <t t-if="a['account_type'] != 'header'">
+                                            <span t-att-style="style_text" t-esc="a.get('debit')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </t>
+                                    </td>
+                                    <td class="text-right" style="white-space: text-nowrap;">
+                                        <t t-if="a['account_type'] != 'header'">
+                                            <span t-att-style="style_text" t-esc="a.get('credit')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </t>
+                                    </td>
+                                    <td class="text-right" style="white-space: text-nowrap;">
+                                        <t t-if="a['account_type'] != 'header'">
+                                            <span t-att-style="style_text" t-esc="a.get('balance')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </t>
+                                    </td>
+                                </t>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-condensed" t-if="not data['enable_filter'] and not data['debit_credit']">
+                        <thead>
+                            <tr>
+                                <th>
+
+                                    <strong t-esc="data['account_report_id'][1]"/><br/>
+                                    <t t-if="data['date_from']"><strong>Date from :</strong> <span t-esc="formated_dates['date_from']"/></t>
+                                </th>
+                                <th>
+                                    <strong>Target Moves:</strong>
+                                    <strong t-if="data['target_move'] == 'all'">All Entries</strong>
+                                    <strong t-if="data['target_move'] == 'posted'">All Posted Entries</strong><br/>
+                                    <t t-if="data['date_to']"><strong>Date to :</strong> <span t-esc="formated_dates['date_to']"/></t>
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th class="text-right">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="pages[page]" t-as="a">
+                                <t t-if="a['level'] != 0">
+                                   <t t-if="a.get('level') &gt; 3">
+                                        <t t-set="style_div" t-value="'padding: 5px 0; border-left: ' + str(a.get('level', 0) * 10) + 'px solid #ffffff; margin 5px auto'"/>
+                                        <t t-set="style_text" t-value="'font-weight: normal;'"/>
+                                    </t>
+                                    <t t-if="not a.get('level') &gt; 3">
+                                        <t t-set="style_div" t-value="'padding: 5px 0; border-left: ' + str(a.get('level', 0) * 10) + 'px solid #ffffff; margin 5px auto'"/>
+                                        <t t-set="style_text" t-value="'font-weight: bold;'"/>
+
+                                    </t>
+
+                                    <td >
+                                        <div t-att-style="style_div"> <span t-att-style="style_text" t-esc="a.get('name')"/></div>
+                                    </td>
+                                    <td class="text-right">
+                                        <t t-if="a['account_type'] != 'header'">
+                                            <span t-att-style="style_text"  t-esc="a.get('balance')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </t>
+                                    </td>
+                                </t>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-condensed" t-if="data['enable_filter'] == 1 and not data['debit_credit']">
+                        <thead>
+                            <tr>
+                                <th>
+
+                                    <strong t-esc="data['account_report_id'][1]"/><br/>
+                                    <!--t t-if="data['date_from']"><strong>Date from :</strong> <span t-esc="formated_dates['date_from']"/></t-->
+                                </th>
+                                <th colspan="4" >
+                                    <strong>Target Moves:</strong>
+                                    <strong t-if="data['target_move'] == 'all'">All Entries</strong>
+                                    <strong t-if="data['target_move'] == 'posted'">All Posted Entries</strong><br/>
+                                    <!--t t-if="data['date_to']"><strong>Date to :</strong> <span t-esc="formated_dates['date_to']"/></t-->
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th class="text-right">
+                                    <span t-if="formated_dates['date_from'] " t-esc="formated_dates['date_from'] + ' - ' "/>
+                                    <span t-if="not formated_dates['date_to'] " t-esc="formated_dates['current_date'] "/>
+                                    <span t-esc="formated_dates['date_to']"/>
+                                </th>
+                                <th class="text-right">
+                                    <span t-if="formated_dates['date_from_cmp'] " t-esc="formated_dates['date_from_cmp'] + ' - ' "/>
+                                    <span t-esc="formated_dates['date_to_cmp']"/>
+                                </th>
+                                <th class="text-right">
+                                    <span>Difference</span>
+                                </th>
+                                 <th class="text-right">
+                                    <span>Index</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="pages[page]" t-as="a">
+                                <t t-if="a['level'] != 0">
+                                     <t t-if="a.get('level') &gt; 3">
+                                        <t t-set="style_div" t-value="'padding: 5px 0; border-left: ' + str(a.get('level', 0) * 10) + 'px solid #ffffff; margin 5px auto'"/>
+                                        <t t-set="style_text" t-value="'font-weight: normal;'"/>
+                                    </t>
+                                    <t t-if="not a.get('level') &gt; 3">
+                                        <t t-set="style_div" t-value="'padding: 5px 0; border-left: ' + str(a.get('level', 0) * 10) + 'px solid #ffffff; margin 5px auto'"/>
+                                        <t t-set="style_text" t-value="'font-weight: bold;'"/>
+
+                                    </t>
+                                    <td>
+                                        <div t-att-style="style_div"> <span t-att-style="style_text" t-esc="a.get('name')"/></div>
+                                    </td>
+                                    <td class="text-right">
+                                        <t t-if="a['account_type'] != 'header'">
+                                            <span t-att-style="style_text" t-esc="a.get('balance')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </t>
+                                    </td>
+                                    <td class="text-right">
+                                        <t t-if="a['account_type'] != 'header'">
+                                            <span t-att-style="style_text" t-esc="a.get('balance_cmp')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </t>
+                                    </td>
+                                    <td class="text-right">
+                                        <t t-if="a['account_type'] != 'header'">
+                                            <span t-att-style="style_text" t-esc="a.get('balance_cmp') - a.get('balance')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </t>
+                                    </td>
+                                    <td class="text-right">
+                                        <t t-if="a['account_type'] != 'header'">
+                                            <span t-if="a.get('balance_cmp')!=0" t-att-style="style_text" t-esc=" str('%.2f' % round((a.get('balance') *100) /a.get('balance_cmp'), 2)) + '%'"/>
+                                            <span t-if="a.get('balance_cmp')==0" t-att-style="style_text" t-esc="'-'"/>
+                                        </t>
+                                    </td>
+                                </t>
+                            </tr>
+                        </tbody>
+                    </table>
+                <p style="page-break-before:always;"> </p>
+                </t>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
+
+

@@ -1,0 +1,998 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_fi_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-11 10:27+0000\n"
+"PO-Revision-Date: 2017-03-11 10:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_vat
+msgid "<strong>Balance</strong>"
+msgstr "<strong>Saldo</strong>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_vat
+msgid "<strong>Cash based</strong>"
+msgstr "<strong>Maksuperusteinen ALV raportointi</strong>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "<strong>Date from :</strong>"
+msgstr "<strong>Alkupäivä:</strong>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_vat
+msgid "<strong>Date from:</strong>"
+msgstr "<strong>Alkupäivä:</strong>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "<strong>Date to :</strong>"
+msgstr "<strong>Loppupäivä :</strong>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_vat
+msgid "<strong>Date to:</strong>"
+msgstr "<strong>Loppupäivä:</strong>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_vat
+msgid "<strong>TAX Name</strong>"
+msgstr "<strong>Veron nimi</strong>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "<strong>Target Moves:</strong>"
+msgstr "<strong>Tapahtumat:</strong>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "<span>Difference</span>"
+msgstr "<span>Muutos</span>"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "<span>Index</span>"
+msgstr "<span>Indeksi</span>"
+
+#. module: l10n_fi_reports
+#: model:ir.model,name:l10n_fi_reports.model_account_print_journal
+msgid "Account Print Journal"
+msgstr "Tulosta tilitapahtumat"
+
+#. module: l10n_fi_reports
+#: model:ir.model,name:l10n_fi_reports.model_account_financial_report
+msgid "Account Report"
+msgstr "Tiliraportti"
+
+#. module: l10n_fi_reports
+#: model:ir.model,name:l10n_fi_reports.model_accounting_report
+msgid "Accounting Report"
+msgstr "Tiliraportti"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_material_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_material_assets
+msgid "Aineelliset hyödykkeet"
+msgstr "Aineelliset hyödykkeet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_materials_and_supplies_inventories
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_materials_and_supplies_inventories
+msgid "Aineet ja tarvikkeet"
+msgstr "Aineet ja tarvikkeet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_materials_supplies_and_goods
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_materials_supplies_and_goods
+msgid "Aineet, tarvikkeet ja tavarat"
+msgstr "Aineet, tarvikkeet ja tavarat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_immaterial_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_immaterial_assets
+msgid "Aineettomat hyödykkeet"
+msgstr "Aineettomat hyödykkeet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_immaterial_rights
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_immaterial_rights
+msgid "Aineettomat oikeudet"
+msgstr "Aineettomat oikeudet"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "All Entries"
+msgstr "Kaikki kirjaukset"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "All Posted Entries"
+msgstr "Kaikki kirjatut viennit."
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_impairment_of_fixed_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_impairment_of_fixed_assets
+msgid "Arvonalentumiset pysyvien vastaavien hyödykkeistä"
+msgstr "Arvonalentumiset pysyvien vastaavien hyödykkeistä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_imp_loses_invests_fixed_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_mpairment_losses_on_investments_in_fixed_assets
+msgid "Arvonalentumiset pysyvien vastaavien sijoituksista"
+msgstr "Arvonalentumiset pysyvien vastaavien sijoituksista"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_impairment_losses_financial_assets
+#: model:account.financial.report,name:l10n_fi_reports.impairment_losses_financial_assets_current_assets
+msgid "Arvonalentumiset vaihtuvien vastaavien rahoitusarvopapereista"
+msgstr "Arvonalentumiset vaihtuvien vastaavien rahoitusarvopapereista"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_revaluation_reserve
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_revaluation_reserve
+msgid "Arvonkorotusrahasto"
+msgstr "Arvonkorotusrahasto"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.vat_report_view
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_l10n_fi_reports_vat_report_cash_based
+msgid "Cash Based"
+msgstr "Maksuperusteinen raportointi"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "Credit"
+msgstr "Kredit"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_financial_finnish
+msgid "Debit"
+msgstr "Debet"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_l10n_fi_reports_vat_report_detailed_report
+msgid "Details"
+msgstr "Näytä tiedot"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_l10n_fi_reports_vat_report_display_name
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_report_l10n_fi_reports_report_vat_display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_retained_earnings
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_retained_earnings
+msgid "Edellisten tilikausien voitto (tappio)"
+msgstr "Edellisten tilikausien voitto (tappio)"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_pension_costs
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_pension_costs
+msgid "Eläkekulut"
+msgstr "Eläkekulut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_provisions_for_pensions
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_provisions_for_pensions
+msgid "Eläkevaraukset"
+msgstr "Eläkevaraukset"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_l10n_fi_reports_vat_report_date_to
+msgid "End Date"
+msgstr "Loppupäivä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_advance_payments_for_property
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_advance_payments_intangible
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_advance_payments_for_property
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_advance_payments_intangible
+msgid "Ennakkomaksut"
+msgstr "Ennakkomaksut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_payments_on_account_tangible
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_payments_on_account_tangible
+msgid "Ennakkomaksut ja keskeneräiset hankinnat"
+msgstr "Ennakkomaksut ja keskeneräiset hankinnat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_personnel_additional_exp
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_personnel_additional_exp
+msgid "Henkilösivukulut"
+msgstr "Henkilösivukulut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_personnel_costs
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_personnel_costs
+msgid "Henkilöstökulut"
+msgstr "Henkilöstökulut"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_accounting_report_hide_zero_reports
+msgid "Hide zero transactions reports"
+msgstr "Piilota nolla rivit"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_report_l10n_fi_reports_report_vat_id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_bonds_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_creditors_bonds_are_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_bonds_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_creditors_bonds_are_long-term
+msgid "Joukkovelkakirjalainat"
+msgstr "Joukkovelkakirjalainat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_intangible_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_intangible_assets
+msgid "Kehittämismenot"
+msgstr "Kehittämismenot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_work_in_progress
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_work_in_progress
+msgid "Keskeneräiset tuotteet"
+msgstr "Keskeneräiset tuotteet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_machines_and_hardware
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_machines_and_hardware
+msgid "Koneet ja kalusto"
+msgstr "Koneet ja kalusto"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_group_contribution
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_group_contribution
+msgid "Konserniavustus"
+msgstr "Konserniavustus"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_financial_expenses
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_financial_expenses
+msgid "Korkokulut ja muut rahoituskulut"
+msgstr "Korkokulut ja muut rahoituskulut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_the_fair_value_reserve
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_the_fair_value_reserve
+msgid "Käyvän arvon rahasto"
+msgstr "Käyvän arvon rahasto"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_loan_receivables_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_loans
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_loan_receivables_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_loans
+msgid "Lainasaamiset"
+msgstr "Lainasaamiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_loans_financial_instituts_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_loans_from_financial_instits_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_loans_financial_instituts_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_loans_from_financial_instits_short-term
+msgid "Lainat rahoituslaitoksilta"
+msgstr "Lainat rahoituslaitoksilta"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_deferred_tax_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_deferred_tax_assets_are_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_deferred_tax_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_deferred_tax_assets_are_long-term
+msgid "Laskennalliset verosaamiset"
+msgstr "Laskennalliset verosaamiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_account_type_deferred_taxes
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_account_type_deferred_taxes
+msgid "Laskennalliset verot"
+msgstr "Laskennalliset verot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_deferred_tax_liabilities_are_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_deferred_tax_liabilities_are_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_deferred_tax_liabilities_are_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_deferred_tax_liabilities_are_short-term
+msgid "Laskennalliset verovelat"
+msgstr "Laskennalliset verovelat"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_l10n_fi_reports_vat_report___last_update
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_report_l10n_fi_reports_report_vat___last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_goodwill
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_goodwill
+msgid "Liikearvo"
+msgstr "Liikearvo"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_expense_other
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_expense_other
+msgid "Liiketoiminnan muut kulut"
+msgstr "Liiketoiminnan muut kulut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_income_other
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_income_other
+msgid "Liiketoiminnan muut tuotot"
+msgstr "Liiketoiminnan muut tuotot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_turnover
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_turnover
+msgid "Liikevaihto"
+msgstr "Liikevaihto"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_ebitda
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_ebitda
+msgid "Liikevoitto (-tappio)"
+msgstr "Liikevoitto (-tappio)"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_creditors_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_creditors_short-term
+msgid "Lyhytaikainen"
+msgstr "Lyhytaikainen"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_receivables_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_receivables_short-term
+msgid "Lyhytaikaiset"
+msgstr "Lyhytaikaiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_land_and_water_areas
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_land_and_water_areas
+msgid "Maa- ja vesialueet"
+msgstr "Maa- ja vesialueet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_unpaid_contributions
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_unpaid_shares_of_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_unpaid_contributions
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_unpaid_shares_of_long-term
+msgid "Maksamattomat osakkeet/osuudet"
+msgstr "Maksamattomat osakkeet/osuudet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_material_and_services
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_material_and_services
+msgid "Materiaalit ja palvelut"
+msgstr "Materiaalit ja palvelut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_financial_expenses
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_interest_and_financial_income
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_investment_income_from_fixed_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_financial_expenses
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_interest_and_financial_income
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_investment_income_from_fixed_assets
+msgid "Muilta"
+msgstr "Muilta"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_other_current_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_other_current_assets
+msgid "Muu vaihto-omaisuus"
+msgstr "Muu vaihto-omaisuus"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_other_tangible_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_other_tangible_assets
+msgid "Muut aineelliset hyödykkeet"
+msgstr "Muut aineelliset hyödykkeet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_other_financial_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_other_financial_assets
+msgid "Muut arvopaperit"
+msgstr "Muut arvopaperit"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_pension_additional_exp_other
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_pension_additional_exp_other
+msgid "Muut henkilösivukulut"
+msgstr "Muut henkilösivukulut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_interest_financial_income
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_interest_financial_income
+msgid "Muut korko- ja rahoitustuotot"
+msgstr "Muut korko- ja rahoitustuotot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_other_shares_and_participations
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_shares_and_marketable_secur
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_other_shares_and_participations
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_shares_and_marketable_secur
+msgid "Muut osakkeet ja osuudet"
+msgstr "Muut osakkeet ja osuudet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_provisions
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_provisions
+msgid "Muut pakolliset varaukset"
+msgstr "Muut pakolliset varaukset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_other_long_term_expenses
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_other_long_term_expenses
+msgid "Muut pitkävaikutteiset menot"
+msgstr "Muut pitkävaikutteiset menot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_reserves
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_reserves_header
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_reserves
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_reserves_header
+msgid "Muut rahastot"
+msgstr "Muut rahastot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_other_long-term_receivables
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_other_receivables
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_other_receivables_investments
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_other_long-term_receivables
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_other_receivables
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_other_receivables_investments
+msgid "Muut saamiset"
+msgstr "Muut saamiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_long-term_liabilities
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_short-term_liabilities
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_long-term_liabilities
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_short-term_liabilities
+msgid "Muut velat"
+msgstr "Muut velat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_other_tax
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_other_tax
+msgid "Muut välittömät verot"
+msgstr "Muut välittömät verot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_sales_adjustment_items
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_sales_adjustment_items
+msgid "Myynnin oikaisu"
+msgstr "Myynnin oikaisu"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_account_type_sales
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_account_type_sales
+msgid "Myynti"
+msgstr "Myynti"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_accounts_receivable
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_trade_receivables_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_accounts_receivable
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_trade_receivables_long-term
+msgid "Myyntisaamiset"
+msgstr "Myyntisaamiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_owners_equity
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_owners_equity
+msgid "Oma Pääoma"
+msgstr "Oma Pääoma"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_buildings_owned
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_land_and_water_areas_owned
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_buildings_owned
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_land_and_water_areas_owned
+msgid "Omistetut"
+msgstr "Omistetut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_stock_capital
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_stock_capital
+msgid "Osake-, osuus- tai muu vastaava pääoma"
+msgstr "Osake-, osuus- tai muu vastaava pääoma"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_account_type_purchases
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_account_type_purchases
+msgid "Ostot tilikauden aikana"
+msgstr "Ostot tilikauden aikana"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_accounts_payable
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_accounts_payable-current
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_accounts_payable
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_accounts_payable-current
+msgid "Ostovelat"
+msgstr "Ostovelat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_shares_in_associated_companies
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_shares_in_associated_companies
+msgid "Osuudet omistusyhteysyrityksissä"
+msgstr "Osuudet omistusyhteysyrityksissä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_shares_in_group_companies
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_shares_consolidated_financial_secur
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_shares_in_group_companies
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_shares_consolidated_financial_secur
+msgid "Osuudet saman konsernin yrityksissä"
+msgstr "Osuudet saman konsernin yrityksissä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_statutory_reserves
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_statutory_reserves
+msgid "Pakolliset Varaukset"
+msgstr "Pakolliset Varaukset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_wages_and_salaries
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_wages_and_salaries
+msgid "Palkat ja palkkiot"
+msgstr "Palkat ja palkkiot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_creditors_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_creditors_long-term
+msgid "Pitkäaikainen"
+msgstr "Pitkäaikainen"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_receivables_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_receivables_long-term
+msgid "Pitkäaikaiset"
+msgstr "Pitkäaikaiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_depreciation_difference
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_depreciation_difference
+msgid "Poistoero"
+msgstr "Poistoero"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_change_in_depreciation_difference
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_change_in_depreciation_difference
+msgid "Poistoeron muutos"
+msgstr "Poistoeron muutos"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_depreciations
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_depreciations
+msgid "Poistot ja arvonalentumiset"
+msgstr "Poistot ja arvonalentumiset"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.vat_report_view
+msgid "Print"
+msgstr "Tulosta"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_fixed_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_fixed_assets
+msgid "Pysyvät Vastaavat"
+msgstr "Pysyvät Vastaavat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_creditors_long-term_equity_loans
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_creditors_short-term_equity_loans
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_creditors_long-term_equity_loans
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_creditors_short-term_equity_loans
+msgid "Pääomalainat"
+msgstr "Pääomalainat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_liquidity
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_liquidity
+msgid "Rahat ja pankkisaamiset"
+msgstr "Rahat ja pankkisaamiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_financial_security
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_financial_security
+msgid "Rahoitusarvopaperit"
+msgstr "Rahoitusarvopaperit"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_financtial_income_expense
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_financtial_income_expense
+msgid "Rahoitustuotot ja -kulut"
+msgstr "Rahoitustuotot ja -kulut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_bills_of_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_bills_of_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_bills_of_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_bills_of_short-term
+msgid "Rahoitusvekselit"
+msgstr "Rahoitusvekselit"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_buildings
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_buildings
+msgid "Rakennukset ja rakennelmat"
+msgstr "Rakennukset ja rakennelmat"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_account_financial_report_requires_page_break
+msgid "Requires preceeding page break"
+msgstr "Vaatii sivunvaihdon"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_advances_received_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_advances_received_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_advances_received_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_advances_received_short-term
+msgid "Saadut ennakot"
+msgstr "Saadut ennakot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_receivables
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_receivables
+msgid "Saamiset"
+msgstr "Saamiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_receiv_associated_companies_investments
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_receiv_associated_companies_non-current
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_receivables_from_associated_companies
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_receiv_associated_companies_investments
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_receiv_associated_companies_non-current
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_receivables_from_associated_companies
+msgid "Saamiset omistusyhteysyrityksiltä"
+msgstr "Saamiset omistusyhteysyrityksiltä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_receivables_from_group
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_receivables_from_group_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_receivables_from_group
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_receivables_from_group_long-term
+msgid "Saamiset saman konsernin yrityksiltä"
+msgstr "Saamiset saman konsernin yrityksiltä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_account_type_financial_expenses_group
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_interest_and_financial_income_from_group
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_investment_income_other_current_assets_group
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_account_type_financial_expenses_group
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_interest_and_financial_income_from_group
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_investment_income_other_current_assets_group
+msgid "Saman konsernin yrityksiltä"
+msgstr "Saman konsernin yrityksiltä"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_accounting_report_separate_sum_and_header
+msgid "Sum below"
+msgstr "Lisää otsikot ja laske summat rivien alle"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_prepaid_expenses_and_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_prepayments_and_accrued_income
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_prepaid_expenses_and_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_prepayments_and_accrued_income
+msgid "Siirtosaamiset"
+msgstr "Siirtosaamiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_accrued_liabilities_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_accrued_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_accrued_liabilities_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_accrued_long-term
+msgid "Siirtovelat"
+msgstr "Siirtovelat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_the_invested_unrestricted_equity_fund
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_the_invested_unrestricted_equity_fund
+msgid "Sijoitetun vapaan oman pääoman rahasto"
+msgstr "Sijoitetun vapaan oman pääoman rahasto"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_investments
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_investments
+msgid "Sijoitukset"
+msgstr "Sijoitukset"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_l10n_fi_reports_vat_report_date_from
+msgid "Start Date"
+msgstr "Alkupäivä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_depreciation_according_to_plan
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_depreciation_according_to_plan
+msgid "Suunnitelman mukaiset poistot"
+msgstr "Suunnitelman mukaiset poistot"
+
+#. module: l10n_fi_reports
+#: model:ir.model.fields,field_description:l10n_fi_reports.field_l10n_fi_reports_vat_report_tags
+msgid "Tags"
+msgstr "Tunnisteet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_pension_loans_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_pension_loans_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_pension_loans_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_pension_loans_short-term
+msgid "Takaisinlainat työeläkevakuutuslaitoksilta"
+msgstr "Takaisinlainat työeläkevakuutuslaitoksilta"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balancesheet_fin_ind_accounts
+msgid "Tase (FIN)"
+msgstr "Tase (FIN)"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balancesheet_fin_ind_accounts
+msgid "Tase (FIN) - tilikohtainen"
+msgstr "Tase (FIN) - tilikohtainen"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_taxes_for_the_period
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_taxes_for_the_period
+msgid "Tilikauden verot"
+msgstr "Tilikauden verot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_financial_period_profit
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profit_financial_period
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_financial_period_profit
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profit_financial_period
+msgid "Tilikauden voitto (tappio)"
+msgstr "Tilikauden voitto (tappio)"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_transfers
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_transfers
+msgid "Tilinpäätössiirrot"
+msgstr "Tilinpäätössiirrot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_untaxed_reserves
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_untaxed_reserves
+msgid "Tilipäätössiirtojen kertymä"
+msgstr "Tilipäätössiirtojen kertymä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_fin
+msgid "Tuloslaskelma (FIN)"
+msgstr "Tuloslaskelma (FIN)"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_fin
+msgid "Tuloslaskelma (FIN) - tilikohtainen"
+msgstr "Tuloslaskelma (FIN) - tilikohtainen"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_income_tax
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_income_tax
+msgid "Tuloverot"
+msgstr "Tuloverot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_income_other_assets_investment
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_income_other_assets_investment
+msgid "Tuotot muista pysyvien vastaavien sijoituksista"
+msgstr "Tuotot muista pysyvien vastaavien sijoituksista"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_income_from_associated_company
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_income_from_associated_company
+msgid "Tuotot osuuksista omistusyhteysyrityksissä"
+msgstr "Tuotot osuuksista omistusyhteysyrityksissä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_income_from_shares_in_group
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_income_from_shares_in_group
+msgid "Tuotot osuuksista saman konsernin yrityksissä"
+msgstr "Tuotot osuuksista saman konsernin yrityksissä"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_external_services
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_external_services
+msgid "Ulkopuoliset palvelut"
+msgstr "Ulkopuoliset palvelut"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_assets
+msgid "VASTAAVAA"
+msgstr "VASTAAVAA"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_Liabilities
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_Liabilities
+msgid "VASTATTAVAA"
+msgstr "VASTATTAVAA"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.menu,name:l10n_fi_reports.menu_account_report_vat
+msgid "VAT Period Report"
+msgstr "ALV kausiraportti"
+
+#. module: l10n_fi_reports
+#: model:ir.actions.act_window,name:l10n_fi_reports.action_account_report_vat
+msgid "VAT Period Report"
+msgstr "ALV kausiraportti"
+
+#. module: l10n_fi_reports
+#: model:ir.model,name:l10n_fi_reports.model_l10n_fi_reports_vat_report
+#: model:ir.ui.view,arch_db:l10n_fi_reports.report_vat
+msgid "VAT Period Report"
+msgstr "ALV kausiraportti"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.vat_report_view
+msgid "VAT Period Report Options"
+msgstr "ALV kausiraportin ominaisuudet"
+
+#. module: l10n_fi_reports
+#: model:ir.actions.report.xml,name:l10n_fi_reports.action_report_vat
+msgid "VAT Period Report"
+msgstr "ALV kausiraportti"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_inventories
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_inventories
+msgid "Vaihto-omaisuus"
+msgstr "Vaihto-omaisuus"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_convertible_bonds_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_convertible_bonds_short-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_convertible_bonds_long-term
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_convertible_bonds_short-term
+msgid "Vaihtovelkakirjalainat"
+msgstr "Vaihtovelkakirjalainat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_chnage_assets
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_chnage_assets
+msgid "Vaihtuvat Vastaavat"
+msgstr "Vaihtuvat Vastaavat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_impairment_losses_financial_assets
+msgid "Vaihtuvien vastaavien poikkeukselliset arvonalentumiset"
+msgstr "Vaihtuvien vastaavien poikkeukselliset arvonalentumiset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_warehouse
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_warehouse
+msgid "Valmiiden ja keskeneräisten tuotteiden varastojen muutos"
+msgstr "Valmiiden ja keskeneräisten tuotteiden varastojen muutos"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_finished_goods_inventories
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_finished_goods_inventories
+msgid "Valmiit tuotteet/tavarat"
+msgstr "Valmiit tuotteet/tavarat"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profitandloss_manufacturing_own_use
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profitandloss_manufacturing_own_use
+msgid "Valmistus omaan käyttöön"
+msgstr "Valmistus omaan käyttöön"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_reserve
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_reserve
+msgid "Vararahasto"
+msgstr "Vararahasto"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_account_type_change_in_inventories
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_account_type_change_in_inventories
+msgid "Varastojen muutos"
+msgstr "Varastojen muutos"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_payables_associated_companies_non-cur
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_payables_to_associated_companies
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_payables_associated_companies_non-cur
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_payables_to_associated_companies
+msgid "Velat omistusyhteysyrityksille"
+msgstr "Velat omistusyhteysyrityksille"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_consolidated_long-term_liabilities
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_group_short-term_liabilities
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_consolidated_long-term_liabilities
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_group_short-term_liabilities
+msgid "Velat saman konsernin yrityksille"
+msgstr "Velat saman konsernin yrityksille"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_change_in_provisions
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_change_in_provisions
+msgid "Verotusperusteisten varausten muutos"
+msgstr "Verotusperusteisten varausten muutos"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_tax_based_reservations
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_tax_based_reservations
+msgid "Verotusperäiset varaukset"
+msgstr "Verotusperäiset varaukset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_tax_provisions
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_tax_provisions
+msgid "Verovaraukset"
+msgstr "Verovaraukset"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_creditors
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_creditors
+msgid "Vieras Pääoma"
+msgstr "Vieras Pääoma"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_profit_before_transfers_and_taxes
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_profit_before_transfers_and_taxes
+msgid "Voitto (tappio) ennen tilinpäätössiirtoja ja veroja"
+msgstr "Voitto (tappio) ennen tilinpäätössiirtoja ja veroja"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_building_leases
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_balance_land_and_water_rights_lease
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_building_leases
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_balance_land_and_water_rights_lease
+msgid "Vuokraoikeudet"
+msgstr "Vuokraoikeudet"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_articles_association_or_fund_rules
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_articles_association_or_fund_rules
+msgid "Yhtiöjärjestyksen tai sääntöjen mukaiset rahastot"
+msgstr "Yhtiöjärjestyksen tai sääntöjen mukaiset rahastot"
+
+#. module: l10n_fi_reports
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_rep_no_accs_share_premium_account
+#: model:account.financial.report,name:l10n_fi_reports.acc_fin_report_share_premium_account
+msgid "Ylikurssirahasto"
+msgstr "Ylikurssirahasto"
+
+#. module: l10n_fi_reports
+#: model:ir.ui.view,arch_db:l10n_fi_reports.vat_report_view
+msgid "or"
+msgstr "tai"
+
+#. module: l10n_fi_reports
+#: model:ir.model,name:l10n_fi_reports.model_report_account_report_financial
+msgid "report.account.report_financial"
+msgstr "report.account.report_financial"
+
+#. module: l10n_fi_reports
+#: model:ir.model,name:l10n_fi_reports.model_report_l10n_fi_reports_report_vat
+msgid "report.l10n_fi_reports.report_vat"
+msgstr "report.l10n_fi_reports.report_vat"
+

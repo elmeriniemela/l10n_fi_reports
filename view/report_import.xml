@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- QWeb Reports -->
+
+
+        <report 
+            id="action_report_vat"
+            model="l10n_fi_reports.vat.report"
+            string="VAT Period Report"
+            report_type="qweb-html"
+            name="l10n_fi_reports.report_vat"
+            file="l10n_fi_reports.report_vat"
+            />
+
+
+        <report
+            id="action_eu_vat_report"
+            model="l10n_fi_reports.eu_vat_report_wizard"
+            string="EU VAT Report"
+            report_type="qweb-html"
+            name="l10n_fi_reports.eu_vat_report"
+            file="l10n_fi_reports.eu_vat_report"
+            />
+
+
+    </data>
+</odoo>

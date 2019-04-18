@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <!--
+          The most common case is when new fields are added to existing views.
+          Update all fields with <> notation
+        -->
+		<record id="view_account_financial_report_form_ext" model="ir.ui.view">
+            <!-- some base data for the field definition -->
+			<field name="name">view_account_financial_report_form.inherit</field>
+			<field name="model">account.financial.report</field>
+            <!-- Here we define the inherited view id, can be checked in Odoo UI debug mode -->
+			<field name="inherit_id" ref="account.view_account_financial_report_form"/>
+            <!-- Here we give the new fields. Recommended is xpath notation -->
+			<field name="arch" type="xml">
+                <xpath expr="(//field)[@name='style_overwrite']" position="after">
+					<field name="requiresPageBreak"/>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</openerp>
